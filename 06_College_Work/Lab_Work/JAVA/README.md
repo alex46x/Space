@@ -1825,6 +1825,6 @@ Next topic will start fresh after this.
 ## ⏸ FINAL STOP POINT (Control Flow)
 
 Next continuation will start from:
-➡️ **Arrays (1D Arrays)**
+➡️ ***Arrays (1D Arrays)***
 
 ⚠️ Make sure Control Flow is clear before moving on.

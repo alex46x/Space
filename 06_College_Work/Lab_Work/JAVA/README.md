@@ -1266,3 +1266,565 @@ Next continuation will start from:
 ⚠️ Practice switch carefully before moving on.
 
 
+# 📘 03_Control_Flow – Deep Notes (Part 3)
+
+⚠️ Continuation mode ON
+This part starts exactly from the previous STOP POINT.
+Topic will continue further.
+
+---
+
+## 🔹 Loops in Java
+
+Loops are used to **execute a block of code repeatedly** until a condition becomes false.
+
+### Types of Loops in Java
+
+* `for` loop
+* `while` loop
+* `do-while` loop
+
+👉 In this part, we focus only on the **for loop**.
+
+---
+
+## 🔹 for Loop
+
+The `for` loop is used when the **number of iterations is known**.
+
+### Syntax
+
+```java
+for(initialization; condition; update) {
+    // code to repeat
+}
+```
+
+### How It Works
+
+1. Initialization runs once
+2. Condition is checked
+3. Loop body executes if condition is true
+4. Update runs
+5. Steps 2–4 repeat
+
+---
+
+## 🔹 Basic for Loop Example
+
+```java
+for(int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+```
+
+Output:
+
+```
+1
+2
+3
+4
+5
+```
+
+---
+
+## 🔹 Printing Even Numbers
+
+```java
+for(int i = 1; i <= 10; i++) {
+    if(i % 2 == 0) {
+        System.out.println(i);
+    }
+}
+```
+
+---
+
+## 🔹 Infinite for Loop
+
+If condition never becomes false, loop runs forever.
+
+```java
+for(;;) {
+    System.out.println("Infinite Loop");
+}
+```
+
+⚠️ Use carefully.
+
+---
+
+## 🔹 Nested for Loop
+
+A loop inside another loop.
+
+```java
+for(int i = 1; i <= 3; i++) {
+    for(int j = 1; j <= 2; j++) {
+        System.out.println(i + " " + j);
+    }
+}
+```
+
+---
+
+## ⚠️ Common Beginner Mistakes
+
+* Forgetting update statement
+* Wrong loop condition
+* Infinite loop accidentally
+
+---
+
+## 🧪 Practice Questions
+
+1. Print numbers from 10 to 1 using for loop
+2. Print multiplication table of 5
+3. How many times does a nested loop run?
+
+---
+
+## ⏸ STOP POINT
+
+Next continuation will start from:
+➡️ **while Loop**
+
+⚠️ Practice for loop properly before moving on.
+
+
+# 📘 03_Control_Flow – Deep Notes (Part 4)
+
+⚠️ Continuation mode ON
+This part starts exactly from the previous STOP POINT.
+Topic will continue further.
+
+---
+
+## 🔹 while Loop
+
+The `while` loop is used when the **number of iterations is NOT known in advance**.
+The loop continues **as long as the condition is true**.
+
+---
+
+## 🔹 Syntax
+
+```java
+while(condition) {
+    // code to repeat
+}
+```
+
+---
+
+## 🔹 How while Loop Works
+
+1. Condition is checked first
+2. If condition is true → loop body executes
+3. Update happens inside loop
+4. Condition is checked again
+5. Loop stops when condition becomes false
+
+---
+
+## 🔹 Basic while Loop Example
+
+```java
+int i = 1;
+
+while(i <= 5) {
+    System.out.println(i);
+    i++;
+}
+```
+
+Output:
+
+```
+1
+2
+3
+4
+5
+```
+
+---
+
+## 🔹 Printing Even Numbers using while
+
+```java
+int i = 2;
+
+while(i <= 10) {
+    System.out.println(i);
+    i += 2;
+}
+```
+
+---
+
+## 🔹 Infinite while Loop
+
+```java
+while(true) {
+    System.out.println("Infinite Loop");
+}
+```
+
+⚠️ Be careful: this loop never stops.
+
+---
+
+## 🔹 while vs for Loop
+
+| for loop         | while loop             |
+| ---------------- | ---------------------- |
+| Known iterations | Unknown iterations     |
+| Compact syntax   | Simple condition based |
+
+---
+
+## ⚠️ Common Beginner Mistakes
+
+* Forgetting to update variable
+* Writing wrong condition
+* Infinite loop accidentally
+
+---
+
+## 🧪 Practice Questions
+
+1. Print numbers from 5 to 1 using while loop
+2. Print sum of first 10 natural numbers
+3. Convert a for loop into while loop
+
+---
+
+## ⏸ STOP POINT
+
+Next continuation will start from:
+➡️ **do-while Loop**
+
+⚠️ Practice while loop properly before moving on.
+
+
+# 📘 03_Control_Flow – Deep Notes (Part 5)
+
+⚠️ Continuation mode ON
+This part starts exactly from the previous STOP POINT.
+Topic will continue further.
+
+---
+
+## 🔹 do-while Loop
+
+The `do-while` loop is similar to `while`, but with **one key difference**:
+👉 **The loop body executes at least once**, even if the condition is false.
+
+---
+
+## 🔹 Syntax
+
+```java
+do {
+    // code to repeat
+} while(condition);
+```
+
+⚠️ Notice the **semicolon (;)** after `while(condition)` — very important.
+
+---
+
+## 🔹 How do-while Loop Works
+
+1. Loop body executes first
+2. Condition is checked after execution
+3. If condition is true → loop repeats
+4. If condition is false → loop stops
+
+---
+
+## 🔹 Basic do-while Example
+
+```java
+int i = 1;
+
+do {
+    System.out.println(i);
+    i++;
+} while(i <= 5);
+```
+
+Output:
+
+```
+1
+2
+3
+4
+5
+```
+
+---
+
+## 🔹 Condition False but Loop Runs Once
+
+```java
+int x = 10;
+
+do {
+    System.out.println("Runs once");
+} while(x < 5);
+```
+
+Output:
+
+```
+Runs once
+```
+
+---
+
+## 🔹 while vs do-while
+
+| while loop              | do-while loop      |
+| ----------------------- | ------------------ |
+| Condition checked first | Body runs first    |
+| May not run at all      | Runs at least once |
+
+---
+
+## ⚠️ Common Beginner Mistakes
+
+* Forgetting semicolon after while
+* Expecting condition check before execution
+* Infinite do-while loop
+
+---
+
+## 🧪 Practice Questions
+
+1. Difference between while and do-while?
+2. Write a program where loop runs exactly once
+3. Convert while loop to do-while loop
+
+---
+
+## ⏸ STOP POINT
+
+Next continuation will start from:
+➡️ **break and continue Statements**
+
+⚠️ Practice do-while loop properly before moving on.
+
+# 📘 03_Control_Flow – Deep Notes (Part 6)
+
+⚠️ Continuation mode ON
+This part starts exactly from the previous STOP POINT.
+Topic will continue further.
+
+---
+
+## 🔹 break Statement
+
+The `break` statement is used to **immediately terminate a loop or switch statement**.
+Once `break` is executed, control jumps **outside** the loop/switch.
+
+---
+
+## 🔹 break in Loops
+
+### Example
+
+```java
+for(int i = 1; i <= 10; i++) {
+    if(i == 5) {
+        break;
+    }
+    System.out.println(i);
+}
+```
+
+Output:
+
+```
+1
+2
+3
+4
+```
+
+👉 Loop stops when `i == 5`.
+
+---
+
+## 🔹 break in switch (Quick Recall)
+
+```java
+int day = 2;
+
+switch(day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
+}
+```
+
+---
+
+## 🔹 continue Statement
+
+The `continue` statement is used to **skip the current iteration** and move to the **next iteration** of the loop.
+
+---
+
+## 🔹 continue in Loops
+
+### Example
+
+```java
+for(int i = 1; i <= 5; i++) {
+    if(i == 3) {
+        continue;
+    }
+    System.out.println(i);
+}
+```
+
+Output:
+
+```
+1
+2
+4
+5
+```
+
+👉 When `i == 3`, printing is skipped.
+
+---
+
+## 🔹 break vs continue (Very Important)
+
+| break                 | continue                |
+| --------------------- | ----------------------- |
+| Exits loop completely | Skips current iteration |
+| Loop ends             | Loop continues          |
+
+---
+
+## ⚠️ Common Beginner Mistakes
+
+* Using `break` instead of `continue`
+* Expecting `continue` to stop loop
+* Forgetting loop update (can cause infinite loop)
+
+---
+
+## 🧪 Practice Questions
+
+1. Difference between `break` and `continue`?
+2. Predict output:
+
+   ```java
+   for(int i = 1; i <= 5; i++) {
+       if(i == 2) continue;
+       if(i == 4) break;
+       System.out.println(i);
+   }
+   ```
+3. Write a program to stop loop at a specific number
+
+---
+
+## ⏸ STOP POINT
+
+Next continuation will start from:
+➡️ **Control Flow Summary + Mini Practice Set**
+
+⚠️ Practice break & continue carefully before moving on.
+
+
+# 📘 03_Control_Flow – Summary & Mini Practice Set
+
+⚠️ Continuation mode ON
+This section **wraps up Control Flow** but does NOT end learning.
+Next topic will start fresh after this.
+
+---
+
+## ✅ Control Flow – What You Learned
+
+### 🔹 Decision Making
+
+* `if`
+* `if-else`
+* `if-else-if` ladder
+* `switch`
+
+### 🔹 Loops
+
+* `for` loop (known iterations)
+* `while` loop (unknown iterations)
+* `do-while` loop (runs at least once)
+
+### 🔹 Loop Control
+
+* `break` → exits loop
+* `continue` → skips current iteration
+
+---
+
+## 🧠 When to Use What?
+
+| Situation         | Best Choice |
+| ----------------- | ----------- |
+| Two conditions    | if-else     |
+| Many fixed values | switch      |
+| Known count       | for loop    |
+| Condition-based   | while loop  |
+| Run at least once | do-while    |
+| Stop loop early   | break       |
+| Skip iteration    | continue    |
+
+---
+
+## 🧪 Mini Practice Set (Very Important)
+
+### 🟢 Easy
+
+1. Print numbers from 1 to 10
+2. Check even or odd number
+
+### 🟡 Medium
+
+3. Print multiplication table of any number
+4. Menu-driven program using switch
+
+### 🔴 Challenge
+
+5. Print all prime numbers between 1 and 100
+6. Find factorial of a number using loop
+
+---
+
+## ⚠️ Common Logical Mistakes
+
+* Wrong loop condition
+* Infinite loop
+* Missing `break` in switch
+* Using wrong loop type
+
+---
+
+## ⏸ FINAL STOP POINT (Control Flow)
+
+Next continuation will start from:
+➡️ **Arrays (1D Arrays)**
+
+⚠️ Make sure Control Flow is clear before moving on.

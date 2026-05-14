@@ -1,9 +1,11 @@
 void main() {
   print("Hello World");
   int x = 5;
+  int? n = null; // nullable integer
   double y = 3.14;
   String name = "Dart";
   print("Integer: $x");
+  print("Nullable Integer: $n");
   print("Double: $y");
   print("String: $name");
   var z = "This is a variable with var";
